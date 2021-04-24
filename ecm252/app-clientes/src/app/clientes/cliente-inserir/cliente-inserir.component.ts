@@ -1,6 +1,6 @@
-import { Component, EventEmitter, OnInit, Output, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Cliente } from '../cliente.model';
+
 import { ClienteService } from '../cliente.service';
 
 @Component({
@@ -10,22 +10,18 @@ import { ClienteService } from '../cliente.service';
 })
 export class ClienteInserirComponent implements OnInit {
 
-
-  //@Output() clienteAdiciondo = new EventEmitter<Cliente>();
-
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
   }
-  
-  onAdicionarClientes(form: NgForm){ 
+
+  onAdicionarCliente(form: NgForm){
     if(form.invalid) return;
-    this.clienteService.adicionarClientes(
+    this.clienteService.adicionarCliente(
       form.value.nome,
       form.value.fone,
       form.value.email
     );
-    }
-    
-}
+  }
 
+}
