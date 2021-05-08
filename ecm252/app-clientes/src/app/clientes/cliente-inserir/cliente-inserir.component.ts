@@ -22,6 +22,8 @@ export class ClienteInserirComponent implements OnInit {
       form.value.fone,
       form.value.email
     );
+      form.resetForm();
+
   }
 
 }

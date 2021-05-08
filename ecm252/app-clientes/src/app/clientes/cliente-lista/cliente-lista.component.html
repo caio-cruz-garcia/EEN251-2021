@@ -3,6 +3,14 @@
       <mat-expansion-panel-header>{{cliente.nome}}</mat-expansion-panel-header>
       <p>{{cliente.fone}}</p>
       <p>{{cliente.email}}</p>
+      <mat-action-row>
+        <button mat-button color ="primary">
+          Editar
+        </button>
+        <button maat-button color="warn">
+          Remover
+        </button>
+      </mat-action-row>
     </mat-expansion-panel>
   </mat-accordion>
   <p *ngIf="clientes.length <= 0"

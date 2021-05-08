@@ -1,6 +1,7 @@
 import { ClienteService } from './clientes/cliente.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { ClienteInserirComponent } from './clientes/cliente-inserir/cliente-inserir.component';
@@ -28,6 +29,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     BrowserAnimationsModule,
     FormsModule,
     MatButtonModule,
+    HttpClientModule,
     MatCardModule,
     MatExpansionModule,
     MatInputModule,
